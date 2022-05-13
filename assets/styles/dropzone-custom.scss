@@ -1,0 +1,59 @@
+// Drop zone styles
+#dropzone.single {
+    height: 410px !important;
+
+
+    .dz-wrapper {
+        height: 100% !important;
+        //max-width: 400px;
+        overflow: hidden !important;
+        width: 100%;
+
+        .dz-message {
+            height: 400px !important;
+            border: none !important;
+        }
+
+
+        .dz-image img {
+            height: 400px !important;
+            object-fit: cover;
+        }
+
+        .dz-progress {
+            display: none;
+        }
+
+        .dz-remove {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: $red;
+            border-radius: 20px;
+            transform: translate(-50%, -50%);
+            text-decoration: none !important;
+            color: $white;
+            z-index: 44444;
+            font-weight: bold;
+            padding: 5px;
+        }
+    }
+}
+
+#video-thumbnail-dropzone {
+    .dz-message {
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .dz-progress {
+        display: none;
+    }
+
+    .dz-image {
+        img {
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}

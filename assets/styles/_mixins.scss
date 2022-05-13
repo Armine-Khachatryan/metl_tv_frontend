@@ -1,0 +1,296 @@
+@import 'variables';
+
+@mixin redButton {
+    width: 100%;
+    height: 51px;
+    background: $red;
+    padding: 15px 32px;
+    color: $white !important;
+    font-size: 16px;
+    font-family: "Muli-Regular";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+@mixin regularButton {
+    width: 119px;
+    height: 36px;
+    padding: 15px 32px;
+    color: $white !important;
+    font-size: 16px;
+    font-family: "Muli-Light";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    background: $metl-green;
+}
+
+
+// Playlist videos modal
+@mixin videoItem {
+    margin-bottom: 30px;
+    padding: 5px;
+    cursor: pointer;
+
+    &.selected {
+        border: 1px solid #18B587;
+    }
+
+    &.added {
+
+        .img {
+            position: relative;
+            overflow: hidden;
+
+            span.added-placeholder {
+                position: absolute;
+                right: -24px;
+                top: 8px;
+                font-size: 13px;
+                transform: rotate(45deg);
+                z-index: 3;
+
+                &::before {
+                    content: "Added";
+                    background: #f53c6f;
+                    color: #ffffff;
+                    padding: 20px 24px 6px;
+                }
+            }
+        }
+
+        .shortened-description {
+            -webkit-line-clamp: 1 !important;
+        }
+    }
+
+
+    .tags {
+        margin-top: 10px;
+
+        li {
+            display: inline-block;
+            margin-right: 5px;
+
+            span {
+                @include tagItem;
+            }
+        }
+    }
+
+}
+
+
+@mixin inputWrap {
+    label {
+        font-size: 16px;
+        color: #545454;
+
+    }
+
+    .input {
+        position: relative;
+        margin-top: 8px;
+
+        &.search {
+            max-width: 400px;
+
+            span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 16px;
+                font-size: 22px;
+                color: #545454;
+                cursor: pointer;
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 8px 16px;
+            background: #81818121;
+            color: #545454;
+            border: 0;
+            outline: none;
+        }
+    }
+}
+
+@mixin tagItem {
+    height: 22px;
+    border-radius: 11px;
+    padding: 2px 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EEEEEE;
+    transition: 0.3s ease-in-out;
+    color: #545454 !important;
+    font-size: 14px;
+    font-family: "Muli-Regular";
+    cursor: pointer;
+}
+
+
+// Playlist item for 'Videos' section
+@mixin playlistItem {
+
+    .playlist-container {
+        width: 432px;
+        display: flex;
+        margin-bottom: 30px;
+
+        .thumbnail-container {
+            position: relative;
+            cursor: pointer;
+
+            .thumbnail {
+                position: relative;
+
+                .short-details {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: white;
+
+                    .name {
+                        font-weight: bold;
+                    }
+                }
+
+                img {
+                    width: 400px;
+                    height: 249px;
+                    object-fit: cover;
+                    cursor: pointer;
+                    @media screen and (max-width: 991px) {
+                        max-width: 432px !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+
+            .fake-bg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background: rgba(1, 1, 1, 0.2);
+            }
+        }
+    }
+}
+
+@mixin stocksItem {
+
+    position: relative;
+    width: 200px;
+    height: 179px;
+    margin-bottom: 32px;
+    padding: 24px 8px;
+    border: 1px dashed transparent;
+    transition: 0.2s;
+    margin-right: 13px;
+    text-align: center;
+    cursor: move;
+
+
+    &.stock-item-green {
+        background: #18B587;
+    }
+
+    &.stock-item-red {
+        background: $red 0 0 no-repeat padding-box;
+    }
+
+    &:hover {
+        border: 1px dashed #FFFFFF;
+    }
+
+    .stock-follow, .stock-unfollow {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        cursor: pointer;
+
+        &:hover {
+            span {
+                font-size: 20px;
+            }
+        }
+
+        span {
+            color: #FFFFFF;
+            transition: 0.1s;
+        }
+
+        button {
+            background: none;
+            color: white;
+            text-transform: uppercase;
+            padding: 3px;
+            font-size: 9px;
+            border: 1px solid white;
+            font-weight: bold;
+            border-radius: 0;
+        }
+    }
+
+
+    .unfollow-btn {
+        border: none !important;
+        margin-top: 5px;
+
+        mat-icon {
+            font-size: 16px;
+        }
+    }
+
+    .stock-name, .stock-price-change, .stock-price-change-percent {
+        color: #FFFFFF;
+        font-size: 14px;
+        font-family: 'Muli-Light';
+        margin-bottom: 4px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .stock-price {
+        color: #FFFFFF;
+        font-size: 26px;
+        line-height: 26px;
+        font-family: 'Muli-Bold';
+        position: relative;
+        max-width: max-content;
+        margin: 0 auto 4px;
+        padding-left: 8px;
+    }
+
+    .dollar-sign {
+        position: absolute;
+        left: -5px;
+        top: -6px;
+        font-size: 16px;
+        font-family: 'Muli-Bold';
+    }
+
+    .stock-price-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 130px;
+        margin: auto;
+    }
+
+
+}
+
+
+
+

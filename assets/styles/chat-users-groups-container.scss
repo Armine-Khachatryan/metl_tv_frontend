@@ -1,0 +1,115 @@
+.people-groups-container {
+    flex: 0 0 316px;
+    background: #F5F5F5;
+    max-width: 317px;
+    width: 100%;
+
+    &.responsive-list{
+
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #DCDCDC;
+        border-radius: 4px
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(174, 174, 174);
+    }
+
+    .list-wrap {
+        // max-height: 600px;
+        // overflow-x: auto;
+    }
+
+    &:not(.sidebar-mode) {
+        height: 100vh;
+    }
+
+
+    @media screen and (max-width: 1029px) {
+        flex: 1;
+    }
+}
+
+.list {
+    max-height: 600px;
+    overflow-x: auto;
+
+    li {
+        padding: 6px 10px;
+        display: flex;
+        border-left: solid 5px transparent;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &.active {
+            border-left: solid 5px #18B587;
+            background: #ffffff;
+
+            .text {
+                .name {
+                    color: #18B587;
+                }
+
+                span {
+                    color: #18B587;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        &:hover {
+            border-left: solid 5px #F53C6F;
+            background: #ffffff;
+
+            .text {
+                .name {
+                    color: #F53C6F;
+                }
+
+                span {
+                    color: #F53C6F;
+                }
+            }
+        }
+
+
+        .img {
+            margin-right: 22px;
+        }
+
+        .text {
+            .name {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 500;
+                color: #545454;
+            }
+
+            span {
+                margin-top: 4px;
+                display: block;
+                font-size: 14px;
+                font-weight: 300;
+                color: #ACACAC;
+            }
+        }
+    }
+}

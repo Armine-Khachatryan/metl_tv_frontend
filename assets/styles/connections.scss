@@ -1,0 +1,53 @@
+//@import 'variables';
+//@import 'mixins';
+//
+//.connections-container, .connection-requests-container, .channel-subscribers-container {
+//    display: flex;
+//    justify-content: space-between;
+//    margin-top: 30px;
+//
+//    .connection, .subscriber {
+//        display: flex;
+//        align-items: center;
+//        justify-content: space-between;
+//        border: 1px solid silver;
+//        padding: 10px;
+//        width: 400px;
+//
+//        .left {
+//            display: flex;
+//
+//            .user-avatar {
+//                position: relative;
+//
+//                .avatar {
+//                    width: 48px !important;
+//                    height: 48px;
+//                }
+//            }
+//        }
+//
+//        .right {
+//            button:not(.connection-actions button) {
+//                background: transparent;
+//            }
+//
+//            .connection-actions {
+//                display: flex;
+//                width: 200px;
+//                justify-content: space-around;
+//                margin-left: 50px;
+//
+//                button {
+//                    @include regularButton;
+//                    font-size: 14px;
+//                }
+//
+//                .decline-connection-btn {
+//                    background-color: transparent;
+//                    color: #545454 !important;
+//                }
+//            }
+//        }
+//    }
+//}

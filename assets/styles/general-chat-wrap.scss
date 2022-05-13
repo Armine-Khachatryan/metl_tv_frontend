@@ -1,0 +1,45 @@
+@import 'variables';
+
+.chat-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    //@media (max-width: 767px) {
+    //    min-height: 100vh;
+    //}
+
+    .img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+}
+
+.responsive-list {
+    flex: 0 0 100% !important;
+
+    .more-btn {
+        display: block;
+    }
+}
+
+.my-message {
+    .img, .name {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .mat-form-field-appearance-legacy .mat-hint {
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+    }
+}
+
+// Todo implement contacts list with infinite scroll

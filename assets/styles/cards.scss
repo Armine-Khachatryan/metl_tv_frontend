@@ -1,0 +1,169 @@
+@import 'variables';
+
+#user-cards-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+
+    .card {
+        width: 320px;
+        height: 203px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: unset;
+        box-shadow: 2px 2px 1px #000;
+        margin: 25px;
+        position: relative;
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .brand {
+            display: flex;
+            align-items: flex-end;
+
+            .brand-img {
+                width: 43px;
+            }
+        }
+
+        &#add-new-card {
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            mat-icon {
+                font-size: 40px;
+                cursor: pointer;
+            }
+        }
+
+        .actions {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.60);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+
+
+
+            mat-icon {
+                cursor: pointer;
+                margin: 0 10px;
+            }
+        }
+
+        &.darken {
+
+            //background-color: rgba(0, 0, 0, 0.26);
+        }
+
+        .expiration-date {
+            font-size: 12px;
+            line-height: 18px;
+            font-family: "Muli-Regular", sans-serif;
+            color: #FFFFFF;
+
+            .numbers {
+                font-size: 17px;
+                line-height: 25px;
+                font-family: "Muli-Regular", sans-serif;
+                color: #FFFFFF;
+            }
+        }
+
+        .bank-name {
+            font-family: "Muli-Regular", sans-serif;
+            font-size: 22px;
+            line-height: 33px;
+            color: #FFFFFF;
+            text-shadow: -1px 1px black;
+            text-transform: capitalize;
+        }
+
+        .card-number {
+            font-family: "Muli-Regular", sans-serif;
+            font-size: 26px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.card-tile {
+    position: absolute;
+    top: 55px;
+    left: -14px;
+    width: 100px;
+    height: 25px;
+    background-color: $red;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 20px;
+        height: 25px;
+        border-left: solid 11px $red;
+        border-bottom: solid 12px transparent;
+        border-top: solid 12px transparent;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 4px;
+        width: 20px;
+        height: 18px;
+        border-right: solid 9px $red;
+        border-bottom: solid 9px transparent;
+        border-top: solid 9px transparent;
+        transform: rotate(135deg);
+        z-index: 1;
+    }
+
+}
+
+.bg-green {
+    background-image: url("assets/img/cards/Group 1572.svg");
+    border-radius: 7px;
+    background-size: cover;
+}
+
+.bg-gray {
+    background-image: url("assets/img/cards/Group 1573.svg");
+    border-radius: 7px;
+    background-size: cover;
+}
+
+.bg-gold {
+    background-image: url("assets/img/cards/Group 1573.svg");
+    border-radius: 7px;
+    background-size: cover;
+}
+.add-card-bg {
+    background-image: url("assets/img/cards/Group 1574.svg");
+    border-radius: 7px;
+    background-size: cover;
+    box-shadow: none!important;
+    font-size: 20px!important;
+    color: #0e9d6a;
+}
+#user-cards-list[_ngcontent-bgb-c555] .card#add-new-card[_ngcontent-bgb-c555] mat-icon[_ngcontent-bgb-c555] {
+    font-size: 19px!important;
+    cursor: pointer;
+}
+

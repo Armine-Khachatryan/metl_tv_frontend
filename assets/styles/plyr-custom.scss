@@ -1,0 +1,17 @@
+// Plyr custom styles
+.plyr {
+    height: 400px!important;
+    width: 100%;
+
+    .plyr__control--overlaid {
+        background-color: #18B587 !important;
+    }
+
+    .plyr__controls button:hover, .plyr__controls button:focus, .plyr--video .plyr__control[aria-expanded=true] {
+        background: #18B587 !important;
+    }
+}
+
+.plyr--full-ui input[type=range] {
+    color: #18B587 !important;
+}

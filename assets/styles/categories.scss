@@ -1,0 +1,29 @@
+@import 'mixins';
+.categories {
+    display: flex;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    border-bottom: 0.5px solid #E2E2E2;
+    margin-bottom: 24px;
+    //@media screen and (max-width: 767px) {
+    //    margin-top:60px
+    //}
+
+}
+
+.categories li {
+    margin-right: 2px;
+    margin-bottom: 8px;
+    width: max-content;
+}
+
+.categories li a {
+    @include tagItem;
+}
+
+.categories li a.active,
+.categories li a:hover {
+    background: #F53C6F;
+    color: white !important;
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+.subscriber,
+.screen.pub-active,
+.screen.sub-active {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#session-container {
+    position: relative;
+    height: 100vh;
+
+    .screen-share {
+        position: absolute;
+        bottom: 35px;
+        right: 30px;
+        z-index: 20;
+        padding: 5px;
+        color: white;
+    }
+
+    #startScreenShare {
+        background: #18B587;
+    }
+}
+
+#session-container.sub-active .subscriber,
+#session-container.pub-active .subscriber {
+    position: absolute;
+    width: 25vmin;
+    height: 25vmin;
+    min-width: 8em;
+    min-height: 8em;
+    align-self: flex-end;
+    right: 0;
+    bottom: 0;
+}
+
+.screen-share {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
